@@ -1,0 +1,749 @@
+body {
+	line-height: 1.0;
+	min-height: var(--viewport-height);
+	min-width: 320px;
+	overflow-x: hidden;
+	word-wrap: break-word;
+	background-color: #46047C;
+	background-image: url(../assets/galaxybackground.gif);
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+}
+
+:root {
+	--background-height: 100vh;
+	--site-language-alignment: left;
+	--site-language-direction: ltr;
+	--site-language-flex-alignment: flex-start;
+	--site-language-indent-left: 1;
+	--site-language-indent-right: 0;
+	--viewport-height: 100vh;
+}
+
+html {
+	font-size: 14pt;
+}
+
+
+#wrapper {
+	-webkit-overflow-scrolling: touch;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: var(--viewport-height);
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+#main {
+	--alignment: center;
+	--flex-alignment: center;
+	--indent-left: 1;
+	--indent-right: 1;
+	--border-radius-tl: 0;
+	--border-radius-tr: 0;
+	--border-radius-br: 0;
+	--border-radius-bl: 0;
+	align-items: center;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	justify-content: center;
+	max-width: 100%;
+	position: relative;
+	text-align: var(--alignment);
+	z-index: 1;
+}
+
+#main > .inner > .full.screen {
+	border-radius: 0 !important;
+	max-width: 100vw;
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	margin-left: -50vw;
+	right: auto;
+}
+
+#memberstxt {
+	text-align: center;
+}
+
+#memberstxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#memberstxt {
+	margin-bottom: -0.5rem !important;
+}
+
+#premtxt {
+	text-align: center;
+}
+
+#premtxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#premtxt {
+	margin-top: -0.5rem !important;
+}
+
+#discordtxt {
+	text-align: left;
+}
+
+
+#discordtxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#discordtxt {
+	margin-bottom: -0.5rem !important;
+}
+
+#socialstxt {
+	text-align: left;
+}
+
+#socialstxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#socialstxt {
+	margin-bottom: -0.5rem !important;
+}
+
+#shoptxt {
+	text-align: right;
+}
+
+#shoptxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#shoptxt {
+	margin-bottom: -0.5rem !important;
+}
+
+#abouttxt {
+	text-align: right;
+}
+
+#abouttxt span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
+#abouttxt {
+	margin-bottom: -0.5rem !important;
+}
+
+.image {
+	display: block;
+	line-height: 0;
+	max-width: 100%;
+	position: relative;
+}
+
+.image .frame {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	vertical-align: top;
+	width: 100%;
+}
+
+.image .frame img {
+	border-radius: 0 !important;
+	max-width: 100%;
+	vertical-align: top;
+	width: inherit;
+}
+
+.image.full .frame {
+	display: block;
+}
+
+.image.full:first-child .frame {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+.image.full:last-child .frame {
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+
+#membersbutton .frame {
+	transform: rotate(-15deg);
+}
+
+#membersbutton .frame:hover {
+		transform: rotate(-4deg);
+}
+
+#centerlogo .frame {
+	width: 10rem;
+	border-radius: 100%;
+}
+
+
+#premiumbutton .frame {
+	transform: rotate(-10deg);
+}
+
+#premiumbutton .frame:hover {
+	transform: rotate(-3deg);
+}
+
+#discordbutton {
+	text-align: left;
+}
+
+#discordbutton .frame {
+	transform: rotate(-25deg);
+}
+
+#discordbutton .frame:hover {
+	transform: rotate(-5deg);
+}
+
+#socialsbutton {
+	text-align: left;
+}
+
+#socialsbutton .frame {
+	transform: rotate(-10deg);
+}
+
+#socialsbutton .frame:hover {
+	transform: rotate(-2deg);
+}
+
+
+#shopbutton {
+	text-align: right;
+}
+
+#shopbutton .frame {
+	transform: rotate(7deg);
+}
+
+#shopbutton .frame:hover {
+	transform: rotate(-3deg);
+}
+
+
+#aboutbutton {
+	text-align: right;
+}
+
+#aboutbutton .frame {
+	transform: rotate(20deg);
+}
+
+#aboutbutton .frame:hover {
+		transform: rotate(5deg);
+}
+
+
+.container {
+	position: relative;
+}
+
+.container > .wrapper {
+	vertical-align: top;
+	position: relative;
+	max-width: 100%;
+	border-radius: inherit;
+}
+
+.container > .wrapper > .inner {
+	vertical-align: top;
+	position: relative;
+	max-width: 100%;
+	border-radius: inherit;
+	text-align: var(--alignment);
+}
+
+#main .container.full:first-child > .wrapper {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child > .wrapper {
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+#main .container.full:first-child > .wrapper > .inner {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child > .wrapper > .inner {
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+#supercontainer {
+	--alignment: center;
+	--flex-alignment: center;
+	--indent-left: 1;
+	--indent-right: 1;
+}
+
+#supercontainer > .wrapper {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 42rem;
+	background-color: transparent;
+}
+
+#supercontainer > .wrapper > .inner {
+	--gutters: 0rem;
+	--padding-horizontal: 6rem;
+	--padding-vertical: 0rem;
+	padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
+#supercontainer.default > .wrapper > .inner > * {
+	margin-bottom: var(--spacing);
+	margin-top: var(--spacing);
+}
+
+#supercontainer.default > .wrapper > .inner > *:first-child {
+	margin-top: 0 !important;
+}
+
+#supercontainer.default > .wrapper > .inner > *:last-child {
+	margin-bottom: 0 !important;
+}
+
+#supercontainer.columns > .wrapper > .inner {
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+}
+
+#supercontainer.columns > .wrapper > .inner > * {
+	flex-grow: 0;
+	flex-shrink: 0;
+	max-width: 100%;
+	text-align: var(--alignment);
+	padding: 0 0 0 var(--gutters);
+}
+
+#supercontainer.columns > .wrapper > .inner > * > *:first-child {
+	margin-top: 0 !important;
+}
+
+#supercontainer.columns > .wrapper > .inner > * > *:last-child {
+	margin-bottom: 0 !important;
+}
+
+#supercontainer.columns > .wrapper > .inner > .full {
+	align-self: stretch;
+}
+
+#supercontainer.columns > .wrapper > .inner > .full > .full:first-child:last-child > * {
+	border-radius: inherit;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+#supercontainer > .wrapper > .inner > :nth-child(1) {
+	width: 30%;
+	--alignment: right;
+	--flex-alignment: flex-end;
+	--indent-left: 0;
+	--indent-right: 1;
+}
+
+#supercontainer > .wrapper > .inner > :nth-child(2) {
+	width: 40%;
+}
+
+#supercontainer > .wrapper > .inner > :nth-child(3) {
+	width: 30%;
+	--alignment: left;
+	--flex-alignment: flex-start;
+	--indent-left: 1;
+	--indent-right: 0;
+}
+
+hr {
+	border: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+hr:before {
+	content: '';
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+#rightspacer:not(:first-child) {
+	margin-top: 0.75rem !important;
+}
+
+#rightspacer:not(:last-child) {
+	margin-bottom: 0.75rem !important;
+}
+
+#rightspacer {
+	text-align: left;
+}
+
+#rightspacer:before {
+	width: 1rem;
+	border-top: solid 1px #000000;
+	height: 1px;
+	margin-top: -0.5px;
+}
+
+#rightspacer:before {
+	border-top: solid 1px transparent;
+}
+
+#leftspacer:not(:first-child) {
+	margin-top: 0.75rem !important;
+}
+
+#leftspacer:not(:last-child) {
+	margin-bottom: 0.75rem !important;
+}
+
+#leftspacer {
+	text-align: left;
+}
+
+#leftspacer:before {
+	width: 1rem;
+	border-top: solid 1px #000000;
+	height: 1px;
+	margin-top: -0.5px;
+}
+
+#leftspacer:before {
+	border-top: solid 1px transparent;
+}
+
+.starbutton  {
+	filter: drop-shadow(0rem 0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0rem -0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0.06rem -0.2rem 0.7rem rgba(255, 255, 255, 0.8));
+  			transition: 0.4s;
+}
+
+.starbutton {
+	width: auto;
+	height: 5.5rem;
+}
+
+.starbutton .frame {
+	width: 4.75rem;
+	transition: 0.4s;
+}
+
+.starbutton:hover {
+		filter: drop-shadow(0rem 0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0rem -0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0.06rem -0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0.09rem -0.2rem 0.7rem rgba(255, 255, 255, 0.7));
+}
+
+.starbutton:hover .frame {
+	width: 5.5rem;
+}
+
+.starbutton:hover .buttonlabel {
+	color: #FFFFFF;
+}
+
+
+.starzlogo .frame {
+	filter: drop-shadow(0rem 0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0rem -0.2rem 0.7rem rgba(255, 255, 255, 0.8))
+  			drop-shadow(0.06rem -0.2rem 0.7rem rgba(255, 255, 255, 0.6));
+}
+
+.buttonlabel {
+    color: transparent;
+	font-family: 'Press Start 2P', monospace;
+	font-size: 0.875em;
+	line-height: 1.5;
+	font-weight: 400;
+	transition: 0.4s;
+}
+
+html a {
+	text-decoration: none;
+}
+
+.ithinkthishoverthingisweirdbutimgettingpaidforitsohere {
+ animation:  bounce 9s linear infinite;
+}
+	.firstb {
+		animation-delay: 1.2s;
+	}
+
+
+	.secondb {
+		animation-delay: 2.3s;
+	}
+
+	.thirdb {
+		animation-delay: 5.3s;
+	}
+
+	.fourthb {
+		animation-delay: 6.4s;
+	}
+
+	.fifthb {
+		animation-delay: 3.3s;
+	}
+	.sixthb {
+		animation-delay: 2.1s;
+	}
+
+	@keyframes bounce {
+	  0% {
+	    transform: translateY(0px) rotate(0);
+	  }
+	  30% {
+	    transform: translateY(10px) rotate(0);
+	  }
+	  50% {
+	    transform: translateY(20px) rotate(0);
+	  }
+	  80% {
+	    transform: translateY(10px) rotate(0);
+	  }
+	  100% {
+	    transform: translateY(0px) rotate(0);
+	  }
+	}
+
+@media (max-width: 800px) {
+	html {
+		font-size: 8pt;
+	}
+
+	body {
+		background-position: center center;
+	}
+	
+	#main > .inner {
+		--padding-horizontal: 2rem;
+		--padding-vertical: 1rem;
+		--spacing: 0.75rem;
+	}
+	
+	#memberstxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.5;
+	}
+	
+	#premtxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.5;
+	}
+	
+	#discordtxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.5;
+		transform: translateX(-1rem);
+	}
+	
+	#socialstxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.5;
+		transform: translateX(-1rem);
+	}
+	
+	#shoptxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.5;
+
+	}
+	
+	#abouttxt {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1;
+	}
+	
+	#membersbutton .frame {
+		width: 8rem;
+	}
+	
+	#centerlogo .frame {
+		width: 12rem;
+	}
+	
+	
+	#premiumbutton .frame {
+		width: 8rem;
+	}
+	
+	
+	#discordbutton .frame {
+		width: 8rem;
+	}
+	
+	#socialsbutton .frame {
+		width: 8rem;
+	}
+	
+	#shopbutton .frame {
+		width: 8rem;
+	}
+	
+	#aboutbutton .frame {
+		width: 8rem;
+	}
+	
+	#supercontainer {
+		--alignment: center;
+		--flex-alignment: center;
+		--indent-left: 1;
+		--indent-right: 1;
+	}
+	
+	#supercontainer > .wrapper {
+		display: block;
+		margin: 0 auto 0 auto;
+	}
+	
+	#supercontainer > .wrapper > .inner {
+		--gutters: 0rem;
+		--padding-horizontal: 0rem;
+		--padding-vertical: 0rem;
+	}
+	
+	#supercontainer > .wrapper > .inner > :nth-child(1) {
+		--alignment: center;
+		--flex-alignment: center;
+		--indent-left: 1;
+		--indent-right: 1;
+	}
+	
+	#supercontainer > .wrapper > .inner > :nth-child(2) {
+		--alignment: center;
+		--flex-alignment: center;
+		--indent-left: 1;
+		--indent-right: 1;
+	}
+	
+	#supercontainer > .wrapper > .inner > :nth-child(3) {
+		--alignment: center;
+		--flex-alignment: center;
+		--indent-left: 1;
+		--indent-right: 1;
+	}
+	
+	#rightspacer:not(:first-child) {
+		margin-top: 0.75rem !important;
+	}
+	
+	#rightspacer:not(:last-child) {
+		margin-bottom: 0.75rem !important;
+	}
+	
+	#rightspacer:before {
+		width: 1rem;
+	}
+	
+	#leftspacer:not(:first-child) {
+		margin-top: 0.75rem !important;
+	}
+	
+	#leftspacer:not(:last-child) {
+		margin-bottom: 0.75rem !important;
+	}
+	
+	#leftspacer:before {
+		width: 1rem;
+	}
+
+	.buttonlabel {
+		color: #FFFFFF;
+	}
+
+	.starbutton  {
+		height: 10rem;
+  			transition: 0.4s;
+	}
+
+	#supercontainer {
+		padding-bottom: 10rem;
+	}
+
+}
+
+@media (max-width: 480px) {
+	#main > .inner {
+		--spacing: 0.65625rem;
+	}
+}
+
+@media (max-width: 360px) {
+	#main > .inner {
+		--padding-horizontal: 1.5rem;
+		--padding-vertical: 0.75rem;
+		--spacing: 0.5625rem;
+	}
+	
+	#memberstxt {
+		font-size: 1.25em;
+	}
+	
+	#premtxt {
+		font-size: 1.25em;
+	}
+	
+	#discordtxt {
+		font-size: 1.25em;
+	}
+	
+	#socialstxt {
+		font-size: 1.25em;
+	}
+	
+	#shoptxt {
+		font-size: 1.25em;
+	}
+	
+	#abouttxt {
+		font-size: 1.25em;
+	}
+	
+	#supercontainer > .wrapper > .inner {
+		--gutters: 0rem;
+		--padding-horizontal: 0rem;
+		--padding-vertical: 0rem;
+	}
+}
